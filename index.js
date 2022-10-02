@@ -14,9 +14,10 @@ const capitalize = (str, lower = false) =>
 
 submitBtn.addEventListener("click", () => {
    if(map.has(userName.value))
-  {
+  { 
+     $('#fader').show();
     const val = map.get(userName.value);
-    alert(val);
+    // alert(val);
     // val = capitalize(val);
 
   //check if the text is empty or not
@@ -27,6 +28,7 @@ submitBtn.addEventListener("click", () => {
     // alert(val);
   } else {
     userName.reportValidity();
+    $('#fader').hide();
   }
 }
 else
@@ -68,6 +70,7 @@ const generatePDF = async (name) => {
   // Serialize the PDFDocument to bytes (a Uint8Array)
   const pdfBytes = await pdfDoc.save();
   console.log("Done creating");
+  $('#fader').hide();
 
   // this was for creating uri and showing in iframe
 
