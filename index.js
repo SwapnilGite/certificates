@@ -1,6 +1,7 @@
 const userName = document.getElementById("name");
 const submitBtn = document.getElementById("submitBtn");
 const map = new Map();
+// const notice = new Notice();
 map.set('gitesmait@gmail.com','Swapnil Gite');
 map.set('pratikpatil@gmail.com','Pratik Patil');
 map.set('ashwinigite007@gmail.com','Ashwini Gite');
@@ -16,6 +17,7 @@ submitBtn.addEventListener("click", () => {
    if(map.has(userName.value))
   { 
      $('#fader').show();
+    // notice.showLoading();
     const val = map.get(userName.value);
     // alert(val);
     // val = capitalize(val);
@@ -70,6 +72,7 @@ const generatePDF = async (name) => {
   // Serialize the PDFDocument to bytes (a Uint8Array)
   const pdfBytes = await pdfDoc.save();
   console.log("Done creating");
+  $('#name').val('');
   $('#fader').hide();
 
   // this was for creating uri and showing in iframe

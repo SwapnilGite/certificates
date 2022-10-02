@@ -6,6 +6,8 @@
     /*opacity: 0.5;*/
 }
 
+
+
 input.form-control.col-md-6 {
     width: 50%;
     margin-right: 1em;
@@ -31,8 +33,35 @@ div#notes {
 }
 
 
-#head{
+/*#head{
   font-family: 'Sigmar One';
+  color: black;
+}*/
+#head {
+  background-image: repeating-linear-gradient(to right, #a2682a 0%, #be8c3c 8%, #be8c3c 18%, #d3b15f 27%, #faf0a0 35%, #ffffc2 40%, #faf0a0 50%, #d3b15f 58%, #be8c3c 67%, #b17b32 77%, #bb8332 83%, #d4a245 88%, #e1b453 93%, #a4692a 100%);
+  background-size: 150%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*font-size: 80px;*/
+  /*font-weight: 200;*/
+  font-size:50px;
+  font-family: 'Sigmar One';
+  filter: drop-shadow(0 0 1px rgba(255, 200, 0, .3));
+  animation: MoveBackgroundPosition 6s ease-in-out infinite;
+}
+
+@keyframes MoveBackgroundPosition { 
+  0% {
+      background-position: 0% 50%
+  }
+  
+  50% {
+    background-position: 100% 50%
+  }
+  
+  100% {
+    background-position: 0% 50%
+  }
 }
 @media (min-width: 991px) {
   .col-md-9.col-sm-12 {
@@ -52,15 +81,32 @@ div#notes {
   align-items: center;
 }
 #fader {
-  opacity: 0.5;
-  background: black;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: none;
+   /*display: inline-block;*/
+   display: none;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  margin-left: 50%;
+  margin-top: 20%;
+  /*background-color: black;*/
+  position:absolute;
+  z-index: 9999;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
 }
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
+/*@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}*/
 .loader {
   display: inline-block;
   width: 30px;
@@ -95,7 +141,7 @@ div#notes {
 
 body
 {
-    background-image: url('back.jpg');
+    background-image: url('bg.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -115,9 +161,16 @@ body
     width: 80%;
     margin: auto;
   }
+  #head
+  {
+    font-size: 47px;
+  }
   html,body
   {
     overflow: hidden;
     height: 100%;
+    /*background-size: cover;*/
+    background-position: center;
+    background-attachment: fixed;
   }
 }
