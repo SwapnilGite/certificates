@@ -88,7 +88,7 @@ div#notes {
   border: 3px solid rgba(255,255,255,.3);
   border-radius: 50%;
   margin-left: 50%;
-  margin-top: 20%;
+  margin-top: 50vh;
   /*background-color: black;*/
   position:absolute;
   z-index: 9999;
@@ -149,6 +149,11 @@ body
   .col-md-9.col-sm-12 {
       margin-left: 12%;
   }
+   #fader
+  {
+    margin-left: 50%;
+    margin-top: 45vh;
+  }
 }
 @media (max-width: 575.98px) {
   #submitBtn
@@ -168,7 +173,7 @@ body
   #fader
   {
     margin-left: 45%;
-    margin-top: 50%;
+    margin-top: 50vh;
   }
   html,body
   {
