@@ -82,7 +82,7 @@ div#notes {
 }
 #fader {
    /*display: inline-block;*/
-   display: none;
+  display: none;
   width: 50px;
   height: 50px;
   border: 3px solid rgba(255,255,255,.3);
@@ -164,6 +164,11 @@ body
   #head
   {
     font-size: 47px;
+  }
+  #fader
+  {
+    margin-left: 45%;
+    margin-top: 50%;
   }
   html,body
   {
