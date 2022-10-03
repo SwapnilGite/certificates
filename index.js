@@ -14,11 +14,13 @@ const capitalize = (str, lower = false) =>
   );
 
 submitBtn.addEventListener("click", () => {
-   if(map.has(userName.value))
+   const temp = userName.value;
+   const fin = temp.trim();
+   if(map.has(fin))
   { 
      $('#fader').show();
+     const val = map.get(fin);
     // notice.showLoading();
-    const val = map.get(userName.value);
     // alert(val);
     // val = capitalize(val);
 
