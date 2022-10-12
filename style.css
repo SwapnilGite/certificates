@@ -5,7 +5,7 @@
     src: url(WinchesterRegular.ttf);
 }
 .jumbotron.text-center {
-    height: 17em;
+    height: 18em;
     background-color: rgba(42, 42, 41,50%);
     /*opacity: 0.5;*/
 }
@@ -187,7 +187,9 @@ body
   }
   #head
   {
-    font-size: 47px;
+    font-size: 50px;
+    /*vertical-align: center;*/
+    margin-top: 15px;
   }
   #fader
   {
@@ -196,7 +198,7 @@ body
   }
   #img
   {
-     width: 80px;
+    width: 80px;
     margin-top: 20px;
     margin-left: 10px;
     margin-bottom: 10px;
